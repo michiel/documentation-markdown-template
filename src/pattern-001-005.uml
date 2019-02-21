@@ -1,0 +1,34 @@
+@startuml
+
+skinparam componentStyle uml2
+skinparam linetype ortho
+scale 4
+
+actor "User" as User
+interface "HTTP" as http1
+component "Load Balancer" as LoadBalancer
+interface "HTTP" as http2
+component "nginx" as WebServer
+interface "HTTP" as http3
+component "ToDoApp / SpringBoot2" as ApplicationServer
+interface "JDBC" as jdbc
+component "Postgres" as Database
+database "SSD" as Storage
+
+User -r-> http1
+http1 -r-> LoadBalancer
+LoadBalancer -r-> http2
+http2 -r-> WebServer
+WebServer -r-> http3
+http3 -r-> ApplicationServer
+ApplicationServer -r-> jdbc
+jdbc -r-> Database
+Database -r-> Storage
+
+legend
+  Arrows indicate connection initiation
+end legend
+
+@enduml
+
+

@@ -1,0 +1,22 @@
+@startuml
+
+skinparam componentStyle uml2
+scale 4
+
+actor "User" as User
+component "Load Balancer" as LoadBalancer
+component "nginx" as WebServer
+component "ToDoApp / SpringBoot2" as ApplicationServer
+database "Postgres 10" as Database
+
+User -d-> LoadBalancer
+LoadBalancer -d-> WebServer
+WebServer -d-> ApplicationServer
+ApplicationServer -d-> Database
+
+legend
+  Arrows indicate connection initiation
+end legend
+
+@enduml
+

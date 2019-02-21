@@ -1,0 +1,17 @@
+@startuml
+
+skinparam componentStyle uml2
+scale 4
+
+actor "User" as User
+component "Application" as ApplicationServer
+database "Database" as Database
+
+User -d-> ApplicationServer
+ApplicationServer -d-> Database
+
+legend
+  Arrows indicate connection initiation
+end legend
+
+@enduml

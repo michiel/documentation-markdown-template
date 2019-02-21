@@ -1,0 +1,59 @@
+@startuml
+
+skinparam linetype ortho
+
+scale 4
+
+actor "User" as User
+
+box "AWS - Load balancer" #LightBlue
+  entity "Load Balancer" as LoadBalancer
+end box
+
+box "Application container" #White
+  entity "nginx" as WebServer
+  entity "ToDoApp / SpringBoot2" as ApplicationServer
+end box
+
+box "AWS - RDS" #LightBlue
+  entity "Postgres" as Database
+  database "SSD" as Storage
+end box
+
+== GET Request ==
+
+User -> LoadBalancer : http/request
+activate LoadBalancer
+LoadBalancer -> WebServer : http/request
+deactivate LoadBalancer
+activate WebServer
+WebServer -> ApplicationServer : http/request
+deactivate WebServer
+activate ApplicationServer
+ApplicationServer -> Database : jdbc/query
+deactivate ApplicationServer
+activate Database
+Database -> Storage : read
+deactivate Database
+activate Storage
+Storage -> Database : data
+deactivate Storage
+activate Database
+Database -> ApplicationServer : Response(data)
+deactivate Database
+activate ApplicationServer
+ApplicationServer -> WebServer : Response(data)
+deactivate ApplicationServer
+activate WebServer
+WebServer -> LoadBalancer : Response(data)
+deactivate WebServer
+activate LoadBalancer
+LoadBalancer -> User : Response(data)
+deactivate LoadBalancer
+
+legend
+  Arrows indicate connection initiation
+end legend
+
+@enduml
+

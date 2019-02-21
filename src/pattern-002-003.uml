@@ -1,0 +1,34 @@
+@startuml
+
+scale 4
+
+nwdiag {
+  network public {
+	  address = "10.0.0.0/8"
+	  loadbalancer [address = "10.0.0.1"];
+  }
+
+  network service {
+	  address = "172.x.x.x/24";
+
+		loadbalancer [address = "172.0.0.1"];
+
+	  appcontainer01 [address = "172.x.x.3"];
+	  appcontainer02 [address = "172.x.x.2"];
+
+  }
+
+  network storage {
+
+	  address = "172.x.x.x/24";
+
+	  appcontainer01 [address = "172.x.x.3"];
+	  appcontainer02 [address = "172.x.x.2"];
+
+	  db01;
+	  db02;
+  }
+
+}
+@enduml
+

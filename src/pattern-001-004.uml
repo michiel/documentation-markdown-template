@@ -1,0 +1,36 @@
+@startuml
+
+skinparam componentStyle uml2
+skinparam linetype ortho
+scale 4
+
+actor "User" as User
+
+package "AWS - Load balancer" as PS1 #Yellow {
+  component "Load Balancer" as LoadBalancer
+}
+
+package "AWS - ECS" #Yellow {
+  package "Application container" #White {
+    component "nginx" as WebServer
+    component "ToDoApp / SpringBoot2" as ApplicationServer
+  }
+}
+
+package "AWS - RDS" as PS2 #Yellow {
+  component "Postgres" as Database
+  database "SSD" as Storage
+}
+
+User -r-> LoadBalancer
+LoadBalancer -r-> WebServer
+WebServer -r-> ApplicationServer
+ApplicationServer -r-> Database
+Database -r-> Storage
+
+legend
+  Arrows indicate connection initiation
+end legend
+
+@enduml
+
