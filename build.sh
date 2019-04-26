@@ -2,10 +2,7 @@
 
 PLANTUML=~/Downloads/plantuml.jar
 
-# Run all python scripts. Send the output to the out dir in a file with the
-# name of the extension replaced with 'txt'
-
-for filename in `find src/ -type f -mmin -10 | grep py`; do
+for filename in `find src/ -type f -mmin -60 | grep py`; do
   echo "Building $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/py$/txt/'`
   echo "  ..  as $outname"
@@ -13,9 +10,7 @@ for filename in `find src/ -type f -mmin -10 | grep py`; do
   python $filename > out/$outname
 done
 
-# Generate all dot files as pngs in out
-
-for filename in `find src/ -type f -mmin -10 | grep dot`; do
+for filename in `find src/ -type f -mmin -60 | grep dot`; do
   echo "Building $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/dot$/png/'`
   echo "  ..  as $outname"
@@ -23,24 +18,32 @@ for filename in `find src/ -type f -mmin -10 | grep dot`; do
   neato $filename -Tpng -Gsize=9,9\! -Gdpi=100 -o out/$outname
 done
 
-# Generate all uml files with plantuml as pngs in out
-
-for filename in `find src/ -type f -mmin -10 | grep uml`; do
+for filename in `find src/ -type f -mmin -60 | grep uml`; do
   echo "Building $filename"
   java -jar $PLANTUML -v -tpng $filename -o ../out/;
 done
 
-# Generate all gnuplot files with gnuplot in out
-
-for filename in `find src/ -type f -mmin -10 | grep gnuplot`; do
+for filename in `find src/ -type f -mmin -60 | grep gnuplot`; do
   echo "Building $filename"
   gnuplot $filename
 done
 
-pandoc src/presentation.md \
+# alias pandoc="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
+
+PANDOC="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
+
+# THEME=CambridgeUS
+# COLORTHEME=beaver
+
+THEME=default
+COLORTHEME=seahorse
+
+$PANDOC src/presentation.md \
+	-V theme:$THEME \
+	-V classoption:aspectratio=169 \
+	-V colortheme:$COLORTHEME \
   --mathml \
   -t beamer \
-  -V theme=Singapore \
   --highlight-style tango \
   --slide-level 2 \
   -o out/presentation.pdf
