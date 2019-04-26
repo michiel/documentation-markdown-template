@@ -1,7 +1,5 @@
 #!/bin/bash
 
-PLANTUML=~/Downloads/plantuml.jar
-
 for filename in `find src/ -type f -mmin -60 | grep py`; do
   echo "Building $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/py$/txt/'`
@@ -28,8 +26,6 @@ for filename in `find src/ -type f -mmin -60 | grep gnuplot`; do
   gnuplot $filename
 done
 
-# alias pandoc="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
-
 PANDOC="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
 
 # THEME=CambridgeUS
@@ -38,7 +34,7 @@ PANDOC="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
 THEME=default
 COLORTHEME=seahorse
 
-$PANDOC src/presentation.md \
+$PANDOC src/document.md \
 	-V theme:$THEME \
 	-V classoption:aspectratio=169 \
 	-V colortheme:$COLORTHEME \
