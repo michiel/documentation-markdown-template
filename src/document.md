@@ -57,11 +57,11 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## High-level
 
-![](./out/pattern-001-001.png)
+![Some pattern](./out/pattern-001-001.png)
 
 ## Add details
 
-![](./out/pattern-001-002.png)
+![Some more detailed pattern](./out/pattern-001-002.png)
 
 ## Add boundaries
 
@@ -69,7 +69,7 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## Make it easier to parse
 
-![Linear sequences are easier to read left-to-right](./out/pattern-001-004.png)
+![Linear sequences are easier to read left-to-right](./out/pattern-001-004.png){height=80%}
 
 ## Add interfaces, removing boundaries
 

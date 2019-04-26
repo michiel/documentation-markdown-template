@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PLANTUML=~/Downloads/plantuml.jar
+
 for filename in `find src/ -type f -mmin -60 | grep py`; do
   echo "Building $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/py$/txt/'`
