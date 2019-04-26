@@ -1,14 +1,3 @@
-% Building blocks for technical presentations
-% Michiel Kalkman
-
----
-header-includes:
-  - \hypersetup{
-            colorlinks=false,
-            allbordercolors={0 0 0},
-            }
----
-
 # Intro
 
 ## Code

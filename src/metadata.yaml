@@ -1,0 +1,9 @@
+---
+title: Building blocks for technical presentations
+author: Michiel Kalkman
+header-includes:
+  - \hypersetup{
+            colorlinks=false,
+            allbordercolors={0 0 0},
+            }
+---

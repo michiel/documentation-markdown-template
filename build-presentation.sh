@@ -10,7 +10,7 @@ PANDOC="docker run --rm -u `id -u`:`id -g` -v `pwd`:/pandoc dalibo/pandocker"
 THEME=default
 COLORTHEME=seahorse
 
-$PANDOC src/document.md \
+$PANDOC src/document.md src/metadata.yaml \
 	-V theme:$THEME \
 	-V classoption:aspectratio=169 \
 	-V colortheme:$COLORTHEME \
