@@ -84,7 +84,11 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## Matplotlib
 
-![matplotlib](./out/sankey.matplotlib.py.png){height=80%}
+![matplotlib - sankey](./out/sankey.matplotlib.py.png){height=80%}
+
+## Matplotlib radar chart
+
+![matplotlib - radar](./out/radar.matplotlib.py.png){height=80%}
 
 
 
