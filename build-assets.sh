@@ -1,8 +1,9 @@
 #!/bin/bash
 
 export PLANTUML=~/Downloads/plantuml.jar
+export MATPLOTLIB="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out czentye/matplotlib-minimal python"
 
-for filename in `find src/ -type f -mmin -60 | grep py`; do
+for filename in `find src/ -type f -mmin -60 | grep py | grep -v matplotlib`; do
   echo "Building $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/py$/txt/'`
   echo "  ..  as $outname"
@@ -27,3 +28,10 @@ for filename in `find src/ -type f -mmin -60 | grep gnuplot`; do
   echo "Building $filename"
   gnuplot $filename
 done
+
+for filename in `find src/ -type f -mmin -60 | grep matplotlib.py`; do
+  echo "Building $filename"
+  $MATPLOTLIB "$filename"
+done
+
+

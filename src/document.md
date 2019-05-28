@@ -46,15 +46,15 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## High-level
 
-![Some pattern](./out/pattern-001-001.png)
+![Some pattern](./out/pattern-001-001.png){height=80%}
 
 ## Add details
 
-![Some more detailed pattern](./out/pattern-001-002.png)
+![Some more detailed pattern](./out/pattern-001-002.png){height=80%}
 
 ## Add boundaries
 
-![Vertical information overload](./out/pattern-001-003.png)
+![Vertical information overload](./out/pattern-001-003.png){height=80%}
 
 ## Make it easier to parse
 
@@ -62,25 +62,30 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## Add interfaces, removing boundaries
 
-![Horizontal information overload](./out/pattern-001-005.png)
+![Horizontal information overload](./out/pattern-001-005.png){height=80%}
 
 ## Make it easier to parse
 
-![Diagonal - Staircase sequence](./out/pattern-001-006.png)
+![Diagonal - Staircase sequence](./out/pattern-001-006.png){height=80%}
 
 # Pattern : Functional breakdown
 
 ## Solution - Components
 
-![Components](./out/pattern-002-001.png)
+![Components](./out/pattern-002-001.png){height=80%}
 
 ## Solution - Sequences
 
-![Sequence](./out/pattern-002-002.png)
+![Sequence](./out/pattern-002-002.png){height=80%}
 
 ## Solution - Network
 
-![Network](./out/pattern-002-003.png)
+![Network](./out/pattern-002-003.png){height=80%}
+
+## Matplotlib
+
+![matplotlib](./out/sankey.matplotlib.py.png){height=80%}
+
 
 
 
