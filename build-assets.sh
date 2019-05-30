@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export PLANTUML=~/Downloads/plantuml.jar
-export MATPLOTLIB="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out czentye/matplotlib-minimal python"
+source env.sh
 
 for filename in `find src/ -type f -mmin -60 | grep py | grep -v matplotlib`; do
   echo "Building $filename"
