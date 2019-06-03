@@ -90,6 +90,10 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ![matplotlib - radar](./out/radar.matplotlib.py.png){height=80%}
 
+## Matplotlib plot
+
+![matplotlib - plot](./out/plot.matplotlib.py.png){height=80%}
+
 
 
 
