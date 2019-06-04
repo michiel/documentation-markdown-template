@@ -94,6 +94,10 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ![matplotlib - plot](./out/plot.matplotlib.py.png){height=80%}
 
+## Blockdiag
+
+![blockdiag](./out/path-to-prod.png){height=80%}
+
 
 
 

@@ -1,0 +1,58 @@
+blockdiag {
+
+  A [label = "Vendor", shape = "actor"];
+  B [label = "Composition Analysis"];
+  C [label = "Artefact repository", shape = "flowchart.database"];
+  D [label = "Production"];
+  E [label = "Developer", shape = "actor"];
+  F [label = "Source repository", shape = "flowchart.database"];
+  G [label = "Static analysis"];
+  H [label = "Verification"];
+  I [label = "Sandbox testing"];
+  J [label = "Regression testing"];
+  K [label = "Operator", shape = "actor"];
+  L [label = "Configuration store", shape = "flowchart.database"];
+
+  group {
+    label = "Security gateway"
+      color = "orange"
+      B;
+  }
+
+  group {
+    label = "Security gateway"
+      color = "orange"
+      G;
+  }
+
+  group {
+    label = "Go live"
+      color = "lightgreen"
+      D;
+  }
+
+  group {
+    label = "Security gateway"
+      color = "orange"
+      H;
+  }
+
+  group {
+    label = "Security gateway"
+      color = "orange"
+      I;
+  }
+
+  group {
+    label = "Quality gateway"
+      color = "yellow"
+      J;
+  }
+
+  A -> H -> B -> C -> I -> J -> D;
+  G -> B;
+  F -> G;
+  E -> F;
+  K -> L -> I;
+  C -> I [folded];
+}

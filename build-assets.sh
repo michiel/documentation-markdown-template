@@ -33,4 +33,11 @@ for filename in `find src/ -type f -mmin -60 | grep matplotlib.py`; do
   $MATPLOTLIB "$filename"
 done
 
+for filename in `find src/ -type f -mmin -60 | grep blockdiag`; do
+  echo "Building $filename"
+  outname=`echo $filename | sed 's/^src\///' | sed 's/blockdiag$/png/'`
+  echo "  ..  as $outname"
+  $BLOCKDIAG --size=1280x960 /$filename -o /out/$outname
+done
+
 
