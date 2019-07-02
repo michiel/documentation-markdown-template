@@ -96,8 +96,11 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## Blockdiag
 
-![blockdiag](./out/path-to-prod.png){height=80%}
+![blockdiag](./out/path-to-prod.png){height=100%}
 
+## Data Flow Diagram
+
+![dataflow](./out/dataflow.png){height=80%}
 
 
 

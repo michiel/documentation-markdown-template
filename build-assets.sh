@@ -23,6 +23,14 @@ for filename in `find src/ -type f -mmin -60 | grep uml`; do
   java -jar $PLANTUML -v -tpng $filename -o ../out/;
 done
 
+for filename in `find src/ -type f -mmin -60 | grep "\.flow$"`; do
+  outname=`echo $filename | sed 's/^src\///' | sed 's/flow$/uml/'`
+  outnamePNG=`echo $filename | sed 's/^src\///' | sed 's/flow$/png/'`
+  echo "Building $filename as $outname"
+  $DATAFLOW dfd /$filename > out/$outname;
+  cat out/$outname | dot -Tpng > out/$outnamePNG;
+done
+
 for filename in `find src/ -type f -mmin -60 | grep gnuplot`; do
   echo "Building $filename"
   gnuplot $filename
@@ -35,9 +43,12 @@ done
 
 for filename in `find src/ -type f -mmin -60 | grep blockdiag`; do
   echo "Building $filename"
-  outname=`echo $filename | sed 's/^src\///' | sed 's/blockdiag$/png/'`
+  outname=`echo $filename | sed 's/^src\///' | sed 's/blockdiag$/svg/'`
+  outnamePNG=`echo $filename | sed 's/^src\///' | sed 's/blockdiag$/png/'`
   echo "  ..  as $outname"
-  $BLOCKDIAG --size=1280x960 /$filename -o /out/$outname
+  $BLOCKDIAG -T svg /$filename -o /out/$outname
+  echo "Converting $outname to $outnamePNG"
+  $IMAGEMAGICK +antialias /out/$outname /out/$outnamePNG
 done
 
 
