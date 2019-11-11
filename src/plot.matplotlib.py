@@ -50,4 +50,4 @@ ax.set_xticklabels(('$a$', '$b$'))
 ax.set_yticks([])
 
 name = os.path.basename(__file__)
-plt.savefig(("/out/%s.png" % name), bbox_inches='tight')
+plt.savefig(("/out/%s.svg" % name), format='svg', bbox_inches='tight')

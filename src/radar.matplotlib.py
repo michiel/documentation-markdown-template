@@ -173,4 +173,4 @@ if __name__ == '__main__':
              size='large')
 
     name = os.path.basename(__file__)
-    plt.savefig(("/out/%s.png" % name), bbox_inches='tight')
+    plt.savefig(("/out/%s.svg" % name), format='svg', bbox_inches='tight')

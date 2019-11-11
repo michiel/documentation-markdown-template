@@ -46,62 +46,52 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## High-level
 
-![Some pattern](./out/pattern-001-001.png){height=80%}
+![Some pattern](./out/pattern-001-001.svg){height=80%}
 
 ## Add details
 
-![Some more detailed pattern](./out/pattern-001-002.png){height=80%}
+![Some more detailed pattern](./out/pattern-001-002.svg){height=80%}
 
 ## Add boundaries
 
-![Vertical information overload](./out/pattern-001-003.png){height=80%}
+![Vertical information overload](./out/pattern-001-003.svg){height=80%}
 
 ## Make it easier to parse
 
-![Linear sequences are easier to read left-to-right](./out/pattern-001-004.png){height=80%}
+![Linear sequences are easier to read left-to-right](./out/pattern-001-004.svg){height=80%}
 
 ## Add interfaces, removing boundaries
 
-![Horizontal information overload](./out/pattern-001-005.png){height=80%}
+![Horizontal information overload](./out/pattern-001-005.svg){height=80%}
 
 ## Make it easier to parse
 
-![Diagonal - Staircase sequence](./out/pattern-001-006.png){height=80%}
+![Diagonal - Staircase sequence](./out/pattern-001-006.svg){height=80%}
 
 # Pattern : Functional breakdown
 
 ## Solution - Components
 
-![Components](./out/pattern-002-001.png){height=80%}
+![Components](./out/pattern-002-001.svg){height=80%}
 
 ## Solution - Sequences
 
-![Sequence](./out/pattern-002-002.png){height=80%}
+![Sequence](./out/pattern-002-002.svg){height=80%}
 
 ## Solution - Network
 
-![Network](./out/pattern-002-003.png){height=80%}
+![Network](./out/pattern-002-003.svg){height=80%}
 
 ## Matplotlib
 
-![matplotlib - sankey](./out/sankey.matplotlib.py.png){height=80%}
+![matplotlib - sankey](./out/sankey.matplotlib.py.svg){height=80%}
 
 ## Matplotlib radar chart
 
-![matplotlib - radar](./out/radar.matplotlib.py.png){height=80%}
+![matplotlib - radar](./out/radar.matplotlib.py.svg){height=80%}
 
 ## Matplotlib plot
 
-![matplotlib - plot](./out/plot.matplotlib.py.png){height=80%}
-
-## Blockdiag
-
-![blockdiag](./out/path-to-prod.png){height=100%}
-
-## Data Flow Diagram
-
-![dataflow](./out/dataflow.png){height=80%}
-
-
+![matplotlib - plot](./out/plot.matplotlib.py.svg){height=80%}
 
 

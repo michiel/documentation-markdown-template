@@ -9,5 +9,5 @@ Sankey(flows=[0.25, 0.15, 0.60, -0.20, -0.15, -0.05, -0.50, -0.10],
 plt.title("The default settings produce a diagram like this.")
 
 name = os.path.basename(__file__)
-plt.savefig(("/out/%s.png" % name), bbox_inches='tight')
+plt.savefig(("/out/%s.svg" % name), format='svg', bbox_inches='tight')
 
