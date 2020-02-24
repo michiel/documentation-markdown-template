@@ -94,4 +94,8 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ![matplotlib - plot](./out/plot.matplotlib.py.svg){height=80%}
 
+## Cloud / python-diagrams
+
+![Some pattern](./out/aws-001.png){height=80%}
+
 
