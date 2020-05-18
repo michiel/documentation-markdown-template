@@ -1,12 +1,13 @@
 @startuml
 
+!include theme.iuml
 skinparam linetype ortho
 
 scale 4
 
 actor "User" as User
 
-box "AWS - Load balancer" #LightBlue
+box "AWS - Load balancer" $COLOR03
   entity "Load Balancer" as LoadBalancer
 end box
 
@@ -15,7 +16,7 @@ box "Application container" #White
   entity "ToDoApp / SpringBoot2" as ApplicationServer
 end box
 
-box "AWS - RDS" #LightBlue
+box "AWS - RDS" $COLOR03
   entity "Postgres" as Database
   database "SSD" as Storage
 end box

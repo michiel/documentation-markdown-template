@@ -1,8 +1,7 @@
 @startuml
 
-skinparam componentStyle uml2
+!include theme.iuml
 skinparam linetype ortho
-scale 4
 
 actor "User" as User
 interface "HTTP" as http1

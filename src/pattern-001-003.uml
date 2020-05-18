@@ -1,22 +1,21 @@
 @startuml
 
-skinparam componentStyle uml2
-scale 4
+!include theme.iuml
 
 actor "User" as User
 
-package "AWS - Load balancer" as PS1 #Yellow {
+package "AWS - Load balancer" as PS1 $COLOR03 {
   component "Load Balancer" as LoadBalancer
 }
 
-package "AWS - ECS" #Yellow {
+package "AWS - ECS" $COLOR03 {
   package "Application container" #White {
     component "nginx" as WebServer
     component "ToDoApp / SpringBoot2" as ApplicationServer
   }
 }
 
-package "AWS - RDS" as PS2 #Yellow {
+package "AWS - RDS" as PS2 $COLOR03 {
   component "Postgres" as Database
   database "SSD" as Storage
 }

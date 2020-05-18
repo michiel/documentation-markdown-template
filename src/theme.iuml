@@ -1,0 +1,38 @@
+skinparam monochrome false
+skinparam ranksep 20
+skinparam dpi 150
+skinparam arrowThickness 0.7
+skinparam packageTitleAlignment left
+skinparam usecaseBorderThickness 0.4
+skinparam defaultFontSize 12
+skinparam rectangle {
+    BorderThickness 1
+    roundCorner 5
+}
+skinparam Interface {
+    BorderThickness 0.5
+}
+skinparam Agent {
+    BorderThickness 0
+    roundCorner 5
+}
+skinparam Component {
+    BorderThickness 0.5
+    Style uml2
+    roundCorner 5
+}
+skinparam linetype poly
+
+!$COLOR01 = "#00876c"
+!$COLOR02 = "#469b75"
+!$COLOR03 = "#6faf80"
+!$COLOR04 = "#94c38e"
+!$COLOR05 = "#b8d79d"
+!$COLOR06 = "#dcebb0"
+!$COLOR07 = "#ffffc5"
+!$COLOR08 = "#f8e3a1"
+!$COLOR09 = "#f3c681"
+!$COLOR10 = "#eea769"
+!$COLOR11 = "#e98659"
+!$COLOR12 = "#e06451"
+!$COLOR13 = "#d43d51"

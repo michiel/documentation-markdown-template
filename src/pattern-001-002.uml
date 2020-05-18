@@ -1,7 +1,6 @@
 @startuml
 
-skinparam componentStyle uml2
-scale 4
+!include theme.iuml
 
 actor "User" as User
 component "Load Balancer" as LoadBalancer
