@@ -98,4 +98,7 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ![Some pattern](./out/aws-001.png){height=80%}
 
+## Seaborn
+
+![seaborn - heatmap](./out/heatmap-001.seaborn.py.svg){height=80%}
 

@@ -2,13 +2,20 @@ skinparam monochrome false
 skinparam ranksep 20
 skinparam dpi 150
 skinparam arrowThickness 0.7
-skinparam packageTitleAlignment left
 skinparam usecaseBorderThickness 0.4
 skinparam defaultFontSize 12
-skinparam rectangle {
-    BorderThickness 1
+
+skinparam package {
+    TitleAlignment left
+    BorderThickness 0.5
     roundCorner 5
 }
+skinparam rectangle {
+    TitleAlignment left
+    BorderThickness 0.5
+    roundCorner 5
+}
+
 skinparam Interface {
     BorderThickness 0.5
 }
@@ -21,7 +28,11 @@ skinparam Component {
     Style uml2
     roundCorner 5
 }
+
 skinparam linetype poly
+
+skinparam LegendBackgroundColor #eeeeee
+skinparam LegendBorderThickness 0.5
 
 !$COLOR01 = "#00876c"
 !$COLOR02 = "#469b75"

@@ -7,7 +7,7 @@ for filename in `find src/ -type f -mmin -60 | grep diagrams.py`; do
   $DIAGRAMS $filename
 done
 
-for filename in `find src/ -type f -mmin -60 | grep py | grep -v matplotlib | grep -v diagrams`; do
+for filename in `find src/ -type f -mmin -60 | grep py | grep -v matplotlib | grep -v diagrams | grep -v seaborn`; do
   echo "Building (python-output) $filename"
   outname=`echo $filename | sed 's/^src\///' | sed 's/py$/txt/'`
   echo "  ..  as $outname"
@@ -36,5 +36,10 @@ done
 for filename in `find src/ -type f -mmin -60 | grep matplotlib.py`; do
   echo "Building (python-matplotlib) $filename"
   $MATPLOTLIB "$filename"
+done
+
+for filename in `find src/ -type f -mmin -60 | grep seaborn.py`; do
+  echo "Building (python-seaborn) $filename"
+  $SEABORN /"$filename"
 done
 

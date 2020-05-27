@@ -7,16 +7,16 @@ scale 4
 
 actor "User" as User
 
-box "AWS - Load balancer" $COLOR03
+box "AWS - Load balancer" $COLOR04
   entity "Load Balancer" as LoadBalancer
 end box
 
-box "Application container" #White
+box "Application container" $COLOR07
   entity "nginx" as WebServer
   entity "ToDoApp / SpringBoot2" as ApplicationServer
 end box
 
-box "AWS - RDS" $COLOR03
+box "AWS - RDS" $COLOR09
   entity "Postgres" as Database
   database "SSD" as Storage
 end box

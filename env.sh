@@ -1,4 +1,5 @@
 export PLANTUML=~/Downloads/plantuml.jar
+export SEABORN="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out michielkalkman/seaborn:latest python"
 export MATPLOTLIB="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out czentye/matplotlib-minimal python"
 export BLOCKDIAG="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out manabu/blockdiag-docker:latest blockdiag --size=2560x1920 "
 export IMAGEMAGICK="docker run --rm -u `id -u`:`id -g` -v `pwd`/src:/src -v `pwd`/out:/out imagemagick:latest convert"
