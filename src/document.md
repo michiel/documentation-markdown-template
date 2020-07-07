@@ -100,5 +100,18 @@ USL(x) = \frac{nx}{1 + \sigma(x-1) + \kappa x(x-1)}
 
 ## Seaborn
 
-![seaborn - heatmap](./out/heatmap-001.seaborn.py.svg){height=80%}
+![seaborn - heatmap](./out/heatmap-001.seaborn.py.svg){height=80%}Y
+
+## Venn Example 1
+
+![Venn 1](./out/venn-001.python-vis.py.svg){height=80%}
+
+## Venn Example 2
+
+![Venn 2](./out/venn-002.python-vis.py.svg){height=80%}
+
+## Venn Example 3
+
+![Venn 3](./out/venn-003.python-vis.py.svg){height=80%}
+
 
